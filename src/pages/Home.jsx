@@ -3,6 +3,7 @@ import TopBar from "../components/TopBar";
 import Navbar from "../components/Navbar";
 import Categories from "../components/categories/Categories";
 import Main from "../components/main/Swiper";
+import ProductList from "../components/products/ProductList";
 
 const Home = () => {
   return (
@@ -15,9 +16,12 @@ const Home = () => {
         <aside>
           <Categories />
         </aside>
-        <main>
+        <main className="mt-4">
           <Main />
         </main>
+        <section className="mt-4">
+          <ProductList />
+        </section>
       </div>
     </div>
   );

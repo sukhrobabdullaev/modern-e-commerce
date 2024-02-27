@@ -18,8 +18,12 @@ const TopBar = () => {
         </div>
         {/* right */}
         <ul className="flex gap-2">
-          <li className="text-gray-500 hover:text-gray-900">Savol-javoblar</li>
-          <li className="text-gray-500 hover:text-gray-900">Buyurtmalarim</li>
+          <li className="text-gray-500 hover:text-gray-900 transition ease-in-out delay-300">
+            Savol-javoblar
+          </li>
+          <li className="text-gray-500 hover:text-gray-900 transition ease-in-out delay-300">
+            Buyurtmalarim
+          </li>
           <li className="font-semibold">⭐O'zbekcha</li>
         </ul>
       </div>
