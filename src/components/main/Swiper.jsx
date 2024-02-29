@@ -12,8 +12,8 @@ const Main = () => {
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log("slide change")}
+      // onSwiper={(swiper) => console.log(swiper)}
       pagination={true}
       modules={[Pagination]}
       className="mySwiper rounded-lg"

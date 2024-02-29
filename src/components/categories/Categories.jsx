@@ -13,8 +13,6 @@ const Categories = () => {
     getCategories();
   }, []);
 
-  console.log(categories);
-
   return (
     <div>
       <ul className="flex items-center space-x-4 flex-wrap text-[25px]">

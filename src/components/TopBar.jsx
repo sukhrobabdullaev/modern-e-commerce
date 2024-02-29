@@ -4,7 +4,7 @@ const TopBar = () => {
   return (
     <div className="bg-gray-200 p-1">
       <div className="flex items-center justify-between max-w-[1200px] mx-auto">
-        <div className="flex gap-2">
+        <div className="flex gap-4">
           <div className="flex gap-1 items-center">
             <CiLocationOn />
             <div className="flex gap-1 items-center">

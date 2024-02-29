@@ -3,6 +3,7 @@ import TopBar from "../components/TopBar";
 import Navbar from "../components/Navbar";
 import Categories from "../components/categories/Categories";
 import Main from "../components/main/Swiper";
+import CatagoryProducts from "../components/products/CatagoryProducts";
 import ProductList from "../components/products/ProductList";
 
 const Home = () => {
@@ -21,6 +22,9 @@ const Home = () => {
         </main>
         <section className="mt-4">
           <ProductList />
+        </section>
+        <section className="mt-4">
+          <CatagoryProducts />
         </section>
       </div>
     </div>
