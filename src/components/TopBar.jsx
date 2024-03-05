@@ -1,6 +1,38 @@
+import { useState, useEffect } from "react";
 import { CiLocationOn } from "react-icons/ci";
 
 const TopBar = () => {
+  const [userLocation, setUserLocation] = useState(null);
+
+  useEffect(() => {
+    getUserLocation();
+  }, []);
+
+  const getUserLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const { latitude, longitude } = position.coords;
+          try {
+            const response = await fetch(
+              `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+            );
+            const data = await response.json();
+            console.log(data);
+            const loc = data?.address?.city;
+            setUserLocation(loc);
+          } catch (error) {
+            console.error("Error fetching location:", error);
+          }
+        },
+        (error) => {
+          console.error("Error getting user location:", error);
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+    }
+  };
   return (
     <div className="bg-gray-200 p-1">
       <div className="flex items-center justify-between max-w-[1200px] mx-auto">
@@ -10,7 +42,7 @@ const TopBar = () => {
             <div className="flex gap-1 items-center">
               <span>Shahar:</span>
               <span className="font-semibold underline-offset-2 underline">
-                Toshkent
+                {userLocation || "Loading..."}
               </span>
             </div>
           </div>
