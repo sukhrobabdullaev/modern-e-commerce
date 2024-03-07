@@ -5,6 +5,7 @@ import Categories from "../components/categories/Categories";
 import Main from "../components/main/Swiper";
 import CatagoryProducts from "../components/products/CatagoryProducts";
 import ProductList from "../components/products/ProductList";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -25,6 +26,9 @@ const Home = () => {
         </section>
         <section className="mt-4">
           <CatagoryProducts />
+        </section>
+        <section className="mt-4">
+          <Footer />
         </section>
       </div>
     </div>
