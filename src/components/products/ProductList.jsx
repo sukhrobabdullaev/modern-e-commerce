@@ -23,8 +23,8 @@ const ProductList = () => {
 
   return (
     <>
-      <h3 className="text-3xl font-semibold mb-4">Tavsiyalar</h3>
-      <div className="flex gap-6 items-center flex-wrap">
+      <h3 className="md:text-3xl text-lg font-semibold mb-4">Tavsiyalar</h3>
+      <div className="flex gap-6 items-center md:justify-between justify-center flex-wrap">
         {products.map((product) => (
           <Product product={product} key={product.id} />
         ))}

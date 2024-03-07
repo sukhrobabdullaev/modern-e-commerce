@@ -18,7 +18,6 @@ const TopBar = () => {
               `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
             );
             const data = await response.json();
-            console.log(data);
             const loc = data?.address?.city;
             setUserLocation(loc);
           } catch (error) {
@@ -34,7 +33,7 @@ const TopBar = () => {
     }
   };
   return (
-    <div className="bg-gray-200 p-1">
+    <div className="bg-gray-200 py-1 px-6">
       <div className="flex items-center justify-between max-w-[1200px] mx-auto">
         <div className="flex gap-4">
           <div className="flex gap-1 items-center">

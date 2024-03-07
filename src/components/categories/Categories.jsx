@@ -15,10 +15,10 @@ const Categories = () => {
 
   return (
     <div>
-      <ul className="flex items-center space-x-4 flex-wrap text-[25px]">
+      <ul className="flex items-center space-x-4 flex-wrap">
         {categories &&
           categories.map((category) => (
-            <li className="text-gray-500 text-sm" key={category}>
+            <li className="text-gray-500 md:text-base text-sm" key={category}>
               <a
                 href="#"
                 className="transition ease-in-out delay-300 hover:text-black"

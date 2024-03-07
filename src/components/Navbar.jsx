@@ -11,7 +11,7 @@ const Navbar = () => {
         <li>
           <form className="flex relative">
             <input
-              className="px-2 w-[400px] py-1 pr-8 ring-gray-300 ring-1 rounded-sm focus:outline-none "
+              className="px-2 md:w-[400px] w-[200px] py-1 pr-8 ring-gray-300 ring-1 rounded-sm focus:outline-none "
               type="text"
               name="search"
               id="search"
@@ -19,25 +19,27 @@ const Navbar = () => {
             />
             <button
               type="submit"
-              className="absolute right-0 bg-gray-200 top-0 bottom-0 flex items-center justify-center"
-              style={{ width: "4rem" }}
+              className="absolute right-0 bg-gray-200 top-0 bottom-0 flex items-center justify-center md:w-16 w-6"
+              // style={{ width: "4rem" }}
             >
               <IoIosSearch size={18} />
             </button>
           </form>
         </li>
-        <li className="flex space-x-2 items-center hover:bg-gray-300 p-2 rounded-sm transition ease-in-out delay-300">
-          <FaRegUser size={20} />
-          <span>Kirish</span>
-        </li>
-        <li className="flex space-x-2 items-center hover:bg-gray-300 p-2 rounded-sm transition ease-in-out delay-300">
-          <FaRegHeart size={20} />
-          <span>Saralanganlar</span>
-        </li>
-        <li className="flex space-x-2 items-center hover:bg-gray-300 p-2 rounded-sm transition ease-in-out delay-300">
-          <IoBagHandleOutline size={20} />
-          <span>Savat</span>
-        </li>
+        <div className="md:flex  md:items-center md:justify-between">
+          <li className="md:flex hidden space-x-2 items-center hover:bg-gray-300 p-2 rounded-sm transition ease-in-out delay-300">
+            <FaRegUser size={20} />
+            <span>Kirish</span>
+          </li>
+          <li className="md:flex hidden space-x-2 items-center hover:bg-gray-300 p-2 rounded-sm transition ease-in-out delay-300">
+            <FaRegHeart size={20} />
+            <span>Saralanganlar</span>
+          </li>
+          <li className="md:flex hidden space-x-2 items-center hover:bg-gray-300 p-2 rounded-sm transition ease-in-out delay-300">
+            <IoBagHandleOutline size={20} />
+            <span>Savat</span>
+          </li>
+        </div>
       </ul>
     </div>
   );

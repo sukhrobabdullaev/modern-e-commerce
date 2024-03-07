@@ -12,7 +12,7 @@ const Home = () => {
       <header className="">
         <TopBar />
       </header>
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1200px] mx-auto px-6">
         <Navbar />
         <aside>
           <Categories />

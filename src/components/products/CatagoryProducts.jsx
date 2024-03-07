@@ -55,7 +55,7 @@ const CatagoryProducts = () => {
         {categories.map((category) => (
           <button
             key={category}
-            className={`text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg  rounded-lg px-8 py-2 text-center text-lg transiton-all ${
+            className={`text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg  rounded-lg px-4 py-1 md:px-8 md:py-2 text-center md:text-lg transiton-all ${
               category === selectId &&
               "from-green-500 via-green-600 to-green-700"
             }`}
@@ -69,7 +69,7 @@ const CatagoryProducts = () => {
       {loading ? (
         <AppLoader />
       ) : (
-        <div className="flex gap-6 items-center flex-wrap mb-8">
+        <div className="flex gap-6 items-center md:justify-between  justify-center flex-wrap mb-8">
           {products.map((product) => (
             <CategoryPro product={product} key={product.id} />
           ))}
