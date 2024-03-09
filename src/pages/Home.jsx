@@ -18,7 +18,7 @@ const Home = () => {
         <aside>
           <Categories />
         </aside>
-        <main className="mt-4">
+        <main className="md:mt-4">
           <Main />
         </main>
         <section className="mt-4">

@@ -15,7 +15,7 @@ const Categories = () => {
 
   return (
     <div>
-      <ul className="flex items-center space-x-4 flex-wrap">
+      <ul className="md:flex md:items-center md:space-x-4 md:flex-wrap hidden">
         {categories &&
           categories.map((category) => (
             <li className="text-gray-500 md:text-base text-sm" key={category}>

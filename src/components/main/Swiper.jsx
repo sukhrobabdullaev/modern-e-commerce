@@ -22,73 +22,84 @@ const Main = () => {
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
-          className=" "
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://images.uzum.uz/cne3bdjifoubkc6thte0/main_page_banner.jpg"
           alt=""
+          className="md:h-auto  h-[400px] object-cover"
         />
       </SwiperSlide>
     </Swiper>

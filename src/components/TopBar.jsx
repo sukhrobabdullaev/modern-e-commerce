@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import { CiLocationOn } from "react-icons/ci";
+import { Select } from "antd";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
+
+const { Option } = Select;
 
 const TopBar = () => {
   const [userLocation, setUserLocation] = useState(null);
@@ -32,6 +36,12 @@ const TopBar = () => {
       console.error("Geolocation is not supported by this browser.");
     }
   };
+
+  function handleChange(value) {
+    console.log(`Selected language: ${value}`);
+    // You can implement your logic here for language change
+  }
+
   return (
     <div className="bg-gray-200 py-1 px-6">
       <div className="flex items-center justify-between max-w-[1200px] mx-auto">
@@ -55,7 +65,33 @@ const TopBar = () => {
           <li className="text-gray-500 hover:text-gray-900 transition ease-in-out delay-300">
             Buyurtmalarim
           </li>
-          <li className="font-semibold">⭐O'zbekcha</li>
+          <li className="font-semibold">
+            <Select
+              defaultValue="uz"
+              onChange={handleChange}
+              // className="bg-none border-none"
+              style={{ width: 120 }}
+            >
+              <Option value="uz">
+                <div className="flex gap-1 items-center">
+                  <span className="fi fi-uz block"></span>
+                  <span>Uzbek</span>
+                </div>
+              </Option>
+              <Option value="en">
+                <div className="flex gap-1 items-center">
+                  <span className="fi fi-us block"></span>
+                  <span>English</span>
+                </div>
+              </Option>
+              <Option value="ru">
+                <div className="flex gap-1 items-center">
+                  <span className="fi fi-ru block"></span>
+                  <span>Русский</span>
+                </div>
+              </Option>
+            </Select>
+          </li>
         </ul>
       </div>
     </div>
