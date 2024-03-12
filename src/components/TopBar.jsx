@@ -45,7 +45,7 @@ const TopBar = () => {
   return (
     <div className="bg-gray-200 py-1 px-6">
       <div className="flex items-center justify-between max-w-[1200px] mx-auto">
-        <div className="flex gap-4">
+        <div className="flex items-center gap-4">
           <div className="flex gap-1 items-center">
             <CiLocationOn />
             <div className="flex gap-1 items-center">
@@ -55,14 +55,14 @@ const TopBar = () => {
               </span>
             </div>
           </div>
-          <h3>Topshirish punktlari</h3>
+          <h3 className="sm:text-[13px] md:text-base">Topshirish punktlari</h3>
         </div>
         {/* right */}
-        <ul className="flex gap-2">
-          <li className="text-gray-500 hover:text-gray-900 transition ease-in-out delay-300">
+        <ul className="items-center gap-2 smm:hidden sm:flex">
+          <li className="text-gray-500 hover:text-gray-900 transition ease-in-out delay-300 sm:text-[13px] md:text-base">
             Savol-javoblar
           </li>
-          <li className="text-gray-500 hover:text-gray-900 transition ease-in-out delay-300">
+          <li className="text-gray-500 hover:text-gray-900 transition ease-in-out delay-300 sm:text-[13px] md:text-base">
             Buyurtmalarim
           </li>
           <li className="font-semibold">

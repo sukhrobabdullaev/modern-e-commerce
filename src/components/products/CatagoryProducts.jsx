@@ -51,11 +51,11 @@ const CatagoryProducts = () => {
 
   return (
     <div className=" ">
-      <div className="flex gap-4 items-center my-8 justify-center">
+      <div className="flex sm:gap-4 gap-2 sm:items-center my-8 sm:justify-center flex-col">
         {categories.map((category) => (
           <button
             key={category}
-            className={`text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg  rounded-lg px-4 py-1 md:px-8 md:py-2 text-center md:text-lg transiton-all ${
+            className={`text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg  rounded-lg px-4 py-1 md:px-8 md:py-2 text-center md:text-lg sm:text-md text-sm  transiton-all ${
               category === selectId &&
               "from-green-500 via-green-600 to-green-700"
             }`}

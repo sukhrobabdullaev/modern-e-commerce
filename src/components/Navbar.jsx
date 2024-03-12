@@ -5,12 +5,12 @@ import MobileNav from "./MobileNav";
 const Navbar = () => {
   return (
     <div className="flex items-center justify-between md:py-3 py-2">
-      <img src="/uzum-logo.png" alt="uzum logo" className="w-32" />
+      <img src="/uzum-logo.png" alt="uzum logo" className="sm:w-32 w-24" />
       <div className="flex items-center gap-2">
         <div>
           <form className="flex relative ">
             <input
-              className="px-2 w-[400px] py-1 pr-8 ring-gray-300 ring-1 rounded-sm focus:outline-none "
+              className="px-2 sm:w-[400px] py-1 pr-8 ring-gray-300 ring-1 rounded-sm focus:outline-none "
               type="text"
               name="search"
               id="search"
