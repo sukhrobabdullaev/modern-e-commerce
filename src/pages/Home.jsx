@@ -27,7 +27,9 @@ const Home = () => {
         <section className="mt-4">
           <CatagoryProducts />
         </section>
-        <section className="mt-4">{/* <Footer /> */}</section>
+        <section className="mt-4">
+          <Footer />
+        </section>
       </div>
     </div>
   );
