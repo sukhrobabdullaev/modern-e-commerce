@@ -51,7 +51,7 @@ const CatagoryProducts = () => {
 
   return (
     <div className=" ">
-      <div className="flex sm:gap-4 gap-2 sm:items-center my-8 sm:justify-center flex-col">
+      <div className="flex sm:gap-4 gap-2 sm:items-center my-8 sm:justify-center smm:flex-col md:flex-row">
         {categories.map((category) => (
           <button
             key={category}

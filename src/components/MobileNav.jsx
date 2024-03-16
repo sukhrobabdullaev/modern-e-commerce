@@ -7,6 +7,7 @@ import { GrCatalog } from "react-icons/gr";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@clerk/clerk-react";
 import { SignedOut, UserButton } from "@clerk/clerk-react";
+// import SignInLoading from "./suspenses/SignInLoading";
 
 const MobileNav = () => {
   const { userId, isLoaded } = useAuth();
@@ -18,7 +19,7 @@ const MobileNav = () => {
   //   }
   // }, [userId]);
 
-  if (!isLoaded) return "Loading...";
+  // if (!isLoaded) return <SignInLoading />;
 
   console.log(userId);
   return (
@@ -37,7 +38,7 @@ const MobileNav = () => {
         <GrCatalog size={20} />
         <span className="md:text-base text-[12px] block">Katalog</span>
       </Link>
-      {!userId ? (
+      {!userId && !isLoaded ? (
         <Link
           to={"/sign-in"}
           className="flex flex-col md:flex-row  space-x-2 items-center hover:bg-gray-300 p-2 rounded-sm transition ease-in-out delay-300"
@@ -46,7 +47,9 @@ const MobileNav = () => {
           <span className="md:text-base text-[12px] block">Kirish</span>
         </Link>
       ) : (
-        <UserButton afterSignOutUrl="/" />
+        <div className="border border-green-300 rounded-full mr-3">
+          <UserButton afterSignOutUrl="/" />
+        </div>
       )}
       <Link
         to={"/"}

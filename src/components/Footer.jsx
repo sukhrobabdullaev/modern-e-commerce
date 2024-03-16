@@ -40,8 +40,8 @@ const Footer = () => {
       </div>
       <div>
         <hr className="mb-2" />
-        <div className="flex md:justify-between smm:flex-col smm:justify-center smm:items-center text-sm smm:gap-2 smm:text-center">
-          <div className="flex md:gap-4 smm:flex-col smm:gap-2 font-semibold text-sm">
+        <div className="flex md:justify-between md:flex-row smm:flex-col smm:justify-center smm:items-center text-sm smm:gap-2 smm:text-center">
+          <div className="flex md:gap-4 md:flex-row smm:flex-col smm:gap-2 font-semibold text-sm">
             <span>Maxfiylik kelishuvi</span>
             <span>Foydalanuvchi kelishuvi</span>
           </div>
