@@ -21,7 +21,7 @@ const MobileNav = () => {
 
   // if (!isLoaded) return <SignInLoading />;
 
-  console.log(userId);
+  // console.log(userId);
   return (
     <ul className="md:flex md:items-center md:justify-between md:static flex items-center justify-between fixed md:shadow-none md:border-none shadow-md bg-white left-0 w-full bottom-0 z-50 border-t px-4">
       <Link

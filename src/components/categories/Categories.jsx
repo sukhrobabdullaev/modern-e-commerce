@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import { client } from "../../api";
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment } from "../../features/counter/counterSlice";
 
 const Categories = () => {
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
+
   const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -9,7 +14,7 @@ const Categories = () => {
     async function getCategories() {
       try {
         const res = await client.get("products/categories");
-        console.log(res.data);
+        // console.log(res.data);
         // if (!res.ok) {
         //   throw new Error("Error fetching categories");
         // }
@@ -26,6 +31,9 @@ const Categories = () => {
 
   return (
     <div>
+      {/* <span className="mb-4 text-[20px]">{count}</span>
+      <button onClick={() => dispatch(increment())}>Increment</button>
+      <button onClick={() => dispatch(decrement())}>Decrement</button> */}
       {isLoading ? (
         // Skeleton loading UI
         <ul className="md:flex md:items-center md:space-x-4 md:flex-wrap">
