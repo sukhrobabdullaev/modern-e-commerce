@@ -2,10 +2,16 @@ import { useState, useEffect } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { Select } from "antd";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { useSelector, useDispatch } from "react-redux";
+import { handleOpen, handleClose } from "../features/mobileMenuSlice";
 
 const { Option } = Select;
 
 const TopBar = () => {
+  const isOpen = useSelector((state) => state.mobileMenu.isOpen);
+  console.log(isOpen);
+  const dispatch = useDispatch();
   const [userLocation, setUserLocation] = useState(null);
 
   useEffect(() => {
@@ -58,7 +64,22 @@ const TopBar = () => {
           <h3 className="sm:text-[13px] md:text-base">Topshirish punktlari</h3>
         </div>
         {/* right */}
-        <ul className="items-center gap-2 smm:hidden sm:flex">
+
+        {isOpen ? (
+          <button className="sm:hidden" onClick={() => dispatch(handleClose())}>
+            <IoMdClose size={20} />
+          </button>
+        ) : (
+          <button className="sm:hidden" onClick={() => dispatch(handleOpen())}>
+            <IoMdMenu size={20} />
+          </button>
+        )}
+
+        <ul
+          className={`items-center gap-2 smm:${
+            isOpen ? "flex" : "hidden"
+          } sm:flex`}
+        >
           <li className="text-gray-500 hover:text-gray-900 transition ease-in-out delay-300 sm:text-[13px] md:text-base">
             Savol-javoblar
           </li>

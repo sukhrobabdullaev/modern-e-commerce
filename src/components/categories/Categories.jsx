@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import { client } from "../../api";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment } from "../../features/counter/counterSlice";
+import { handleOpen, handleClose } from "../../features/mobileMenuSlice";
 
 const Categories = () => {
   const count = useSelector((state) => state.counter.value);
+  const isOpen = useSelector((state) => state.mobileMenu.isOpen);
+  // console.log(isOpen);
   const dispatch = useDispatch();
 
   const [categories, setCategories] = useState([]);
@@ -36,7 +39,7 @@ const Categories = () => {
       <button onClick={() => dispatch(decrement())}>Decrement</button> */}
       {isLoading ? (
         // Skeleton loading UI
-        <ul className="md:flex md:items-center md:space-x-4 md:flex-wrap">
+        <ul className="md:flex md:items-center smm:hidden  md:space-x-4 md:flex-wrap">
           {[...Array(10)].map((_, index) => (
             <li
               className="animate-pulse text-gray-500 md:text-base text-sm"
@@ -47,7 +50,11 @@ const Categories = () => {
           ))}
         </ul>
       ) : (
-        <ul className="md:flex md:items-center md:space-x-4 md:flex-wrap">
+        <ul
+          className={`md:flex md:items-center smm:${
+            isOpen ? "flex" : "hidden"
+          } md:space-x-4 md:flex-wrap`}
+        >
           {categories.map((category, index) => (
             <li className="text-gray-500 md:text-base text-sm" key={index}>
               <a
