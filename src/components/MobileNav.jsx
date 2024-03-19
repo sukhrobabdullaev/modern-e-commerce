@@ -38,7 +38,7 @@ const MobileNav = () => {
         <GrCatalog size={20} />
         <span className="md:text-base text-[12px] block">Katalog</span>
       </Link>
-      {!userId && !isLoaded ? (
+      {!userId ? (
         <Link
           to={"/sign-in"}
           className="flex flex-col md:flex-row  space-x-2 items-center hover:bg-gray-300 p-2 rounded-sm transition ease-in-out delay-300"

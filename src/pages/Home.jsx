@@ -11,6 +11,7 @@ const Home = () => {
   return (
     <div className="">
       <header className="">
+        {/* <img src="https://i.imgur.com/VNZRvx5.jpeg" alt="" /> */}
         <TopBar />
       </header>
       <div className="max-w-[1200px] mx-auto px-6">
