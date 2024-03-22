@@ -3,7 +3,7 @@ import { IoBagHandleOutline } from "react-icons/io5";
 import { formatNumberWithoutCommas } from "../../helpers";
 import { FaRegHeart } from "react-icons/fa";
 
-const Product = ({ product, categories }) => {
+const Product = ({ product }) => {
   const [sum, setSum] = useState(product.price);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const Product = ({ product, categories }) => {
     <div className="flex flex-col gap-2 md:w-[220px] w-[276px] rounded-lg hover:shadow-md transition ease-in-out delay-300 ">
       <div className="border rounded-lg hover:rounded-bl-none hover:rounded-br-none transition ease-in-out delay-300 relative">
         <img
-          src={product.image}
+          src={product.images[0]}
           alt={product.description}
           className="h-[300px] mx-auto transition ease-in-out delay-300 hover:scale-95"
           title={product.title}
@@ -51,12 +51,12 @@ const Product = ({ product, categories }) => {
       </div>
       <div className="p-2">
         <h4 className="text-sm line-clamp-1">{product.title}</h4>
-        <div className="text-gray-400 text-[12px] flex gap-1 mt-1">
+        {/* <div className="text-gray-400 text-[12px] flex gap-1 mt-1">
           <span>⭐</span>
           <span>
             {product?.rating?.rate} ({product?.rating?.count} ta sharh)
           </span>
-        </div>
+        </div> */}
         <div className="text-[12px] mt-1 font-semibold inline-block rounded-md bg-[#fff000] p-1">
           <span>{formatNumberWithoutCommas((sum / 12).toFixed(0))}</span>
           <span> so'm/oyiga</span>

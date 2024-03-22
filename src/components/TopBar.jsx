@@ -10,7 +10,7 @@ const { Option } = Select;
 
 const TopBar = () => {
   const isOpen = useSelector((state) => state.mobileMenu.isOpen);
-  console.log(isOpen);
+  // console.log(isOpen);
   const dispatch = useDispatch();
   const [userLocation, setUserLocation] = useState(null);
 

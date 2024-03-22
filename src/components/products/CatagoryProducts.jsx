@@ -20,10 +20,11 @@ const CatagoryProducts = () => {
     const newUrl = `${window.location.pathname}?filter=${name}`;
     navigate(newUrl);
   };
+  console.log(searchParams.get("filter"));
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await client.get("products/categories");
+        const res = await client.get("categories/");
         if (res.status === 200) {
           setCategories(res.data);
         }
@@ -34,7 +35,7 @@ const CatagoryProducts = () => {
       try {
         setLoading(true);
         const res = await client.get(
-          `products/category/${searchParams.get("filter") || "electronics"}`
+          `products/?categoryId=${searchParams.get("filter") || "1"}`
         );
         if (res.status === 200) {
           setLoading(false);
@@ -52,16 +53,18 @@ const CatagoryProducts = () => {
   return (
     <div className=" ">
       <div className="flex sm:gap-4 gap-2 sm:items-center my-8 sm:justify-center smm:flex-col md:flex-row">
-        {categories.map((category) => (
+        {categories.map((category, index) => (
           <button
-            key={category}
+            key={category.id}
             className={`text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg  rounded-lg px-4 py-1 md:px-8 md:py-2 text-center md:text-lg sm:text-md text-sm  transiton-all ${
-              category === selectId &&
-              "from-green-500 via-green-600 to-green-700"
+              selectId === null && index === 0
+                ? "from-green-500 via-green-600 to-green-700"
+                : category.id === selectId &&
+                  "from-green-500 via-green-600 to-green-700"
             }`}
-            onClick={() => handleClick(category)}
+            onClick={() => handleClick(category.id)}
           >
-            {category}
+            {category.name}
           </button>
         ))}
       </div>

@@ -21,6 +21,7 @@ const ProductList = () => {
     getProducts();
   }, []);
 
+  console.log(products);
   return (
     <>
       <h3 className="md:text-3xl text-lg font-semibold mb-4">Tavsiyalar</h3>

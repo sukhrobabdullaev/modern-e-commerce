@@ -16,8 +16,8 @@ const Categories = () => {
   useEffect(() => {
     async function getCategories() {
       try {
-        const res = await client.get("products/categories");
-        // console.log(res.data);
+        const res = await client.get("categories/");
+        // console.log(res.data);products
         // if (!res.ok) {
         //   throw new Error("Error fetching categories");
         // }
@@ -55,13 +55,16 @@ const Categories = () => {
             isOpen ? "flex" : "hidden"
           } md:space-x-4 md:flex-wrap`}
         >
-          {categories.map((category, index) => (
-            <li className="text-gray-500 md:text-base text-sm" key={index}>
+          {categories.map((category) => (
+            <li
+              className="text-gray-500 md:text-base text-sm"
+              key={category.id}
+            >
               <a
                 href="#"
                 className="transition ease-in-out delay-300 hover:text-black"
               >
-                {category.toUpperCase()}
+                {category?.name}
               </a>
             </li>
           ))}

@@ -39,7 +39,7 @@ const CategoryPro = ({ product }) => {
       <div className="flex flex-col gap-2  md:w-[220px] w-[276px] rounded-lg hover:shadow-md transition ease-in-out delay-300 ">
         <div className="border rounded-lg hover:rounded-bl-none hover:rounded-br-none transition ease-in-out delay-300 relative">
           <img
-            src={product.image}
+            src={product.images[0]}
             alt={product.description}
             className="h-[300px] mx-auto transition ease-in-out delay-300 hover:scale-95"
             title={product.title}
