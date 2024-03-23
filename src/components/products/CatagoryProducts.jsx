@@ -20,7 +20,9 @@ const CatagoryProducts = () => {
     const newUrl = `${window.location.pathname}?filter=${name}`;
     navigate(newUrl);
   };
-  console.log(searchParams.get("filter"));
+
+  // console.log(searchParams.get("filter"));
+
   useEffect(() => {
     const fetchCategories = async () => {
       try {
